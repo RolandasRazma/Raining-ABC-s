@@ -51,20 +51,15 @@
         [bg setAnchorPoint:CGPointZero];
         [self addChild:bg];
         
-        CCSprite *waves1 = [CCSprite spriteWithFile:@"waves.png"];
-        [waves1 setAnchorPoint:CGPointZero];
-        [waves1 setPosition:CGPointZero];
-        [self addChild:waves1];
-
-        CCSprite *waves2 = [CCSprite spriteWithFile:@"waves2.png"];
-        [waves2 runAction: [CCRepeat actionWithAction:[CCSequence actions:
+        CCSprite *waves = [CCSprite spriteWithFile:@"waves.png"];
+        [waves runAction: [CCRepeat actionWithAction:[CCSequence actions:
                                                        [CCMoveBy actionWithDuration:1 position:CGPointMake(-5, 5)],
                                                        [CCMoveBy actionWithDuration:1 position:CGPointMake(10, -10)],
                                                        [CCMoveBy actionWithDuration:1 position:CGPointMake(-5, 5)],
                                                        nil] times:999]];
-        [waves2 setAnchorPoint:CGPointZero];
-        [waves2 setPosition:CGPointZero];
-        [self addChild:waves2];
+        [waves setAnchorPoint:CGPointZero];
+        [waves setPosition:CGPointZero];
+        [self addChild:waves];
         
         
         CCSprite *playButton = [CCSprite spriteWithFile:@"play.png"];
